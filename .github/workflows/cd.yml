@@ -22,6 +22,6 @@ jobs:
         run: docker build -t ${{ secrets.DOCKER_USERNAME }}/flask_devops_cd:latest .
 
       - name: Push Docker image
-        run: docker push ${{ secret s.DOCKER_USERNAME }}//flask_devops_cd:latest  
+        run: docker push ${{ secrets.DOCKER_USERNAME }}/flask_devops_cd:latest
       - name: Deploy locally
         run: powershell -ExecutionPolicy Bypass -File ".\deploy.ps1" 
